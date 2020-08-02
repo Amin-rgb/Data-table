@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<style>
+
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+     
+    <table class= "table table-striped table-dark">
+    </table>
+     
+     <button id ="driver"  class="btn btn-danger" >load data</button>
+ </body>
+
+
+<script>
+$(document).ready(function() {
+
+var clicked = 1;
+         $("#driver").click(function(event)
+         {
+            $.getJSON('employees.json', function(jd) 
+            {
+                $('.table').html('  <thead class="thead-light"><tr> <th scope="col">id</th><th scope="col">Employee name</th><th scope="col">employee salary</th>     <th scope="col">employee age</th>  <th scope="col">employee profile image</th>   </tr></thead>');
+                $('.table').append('  <tbody><tr><th scope="row">'+jd.employees[0].id+'</th><td>'+jd.employees[0].employee_name+'</td><td> $'+jd.employees[0].employee_salary+'</td><td>'+jd.employees[0].employee_age+'</td><td>'+jd.employees[0].profile_image+'</td></tr></tbody>');
+                $('.table').append('  <tbody><tr><th scope="row">'+jd.employees[1].id+'</th><td>'+jd.employees[1].employee_name+'</td><td>$'+jd.employees[1].employee_salary+'</td><td>'+jd.employees[1].employee_age+'</td><td>'+jd.employees[1].profile_image+'</td></tr></tbody>');
+                $('.table').append('  <tbody><tr><th scope="row">'+jd.employees[2].id+'</th><td>'+jd.employees[2].employee_name+'</td><td>$'+jd.employees[2].employee_salary+'</td><td>'+jd.employees[2].employee_age+'</td><td>'+jd.employees[2].profile_image+'</td></tr></tbody>');
+                $('.table').append('  <tbody><tr><th scope="row">'+jd.employees[3].id+'</th><td>'+jd.employees[3].employee_name+'</td><td>$'+jd.employees[3].employee_salary+'</td><td>'+jd.employees[3].employee_age+'</td><td>'+jd.employees[3].profile_image+'</td></tr></tbody>');
+                $('.table').append('  <tbody><tr><th scope="row">'+jd.employees[4].id+'</th><td>'+jd.employees[4].employee_name+'</td><td>$'+jd.employees[4].employee_salary+'</td><td>'+jd.employees[4].employee_age+'</td><td>'+jd.employees[4].profile_image+'</td></tr></tbody>');
+                $('.table').append('  <tbody><tr><th scope="row">'+jd.employees[5].id+'</th><td>'+jd.employees[5].employee_name+'</td><td>$'+jd.employees[5].employee_salary+'</td><td>'+jd.employees[5].employee_age+'</td><td>'+jd.employees[5].profile_image+'</td></tr></tbody>');
+                $('.table').append('  <tbody><tr><th scope="row">'+jd.employees[6].id+'</th><td>'+jd.employees[6].employee_name+'</td><td>$'+jd.employees[6].employee_salary+'</td><td>'+jd.employees[6].employee_age+'</td><td>'+jd.employees[6].profile_image+'</td></tr></tbody>');
+                $('.table').append('  <tbody><tr><th scope="row">'+jd.employees[7].id+'</th><td>'+jd.employees[7].employee_name+'</td><td>$'+jd.employees[7].employee_salary+'</td><td>'+jd.employees[7].employee_age+'</td><td>'+jd.employees[7].profile_image+'</td></tr></tbody>');
+                $('.table').append('  <tbody><tr><th scope="row">'+jd.employees[8].id+'</th><td>'+jd.employees[8].employee_name+'</td><td>$'+jd.employees[8].employee_salary+'</td><td>'+jd.employees[8].employee_age+'</td><td>'+jd.employees[8].profile_image+'</td></tr></tbody>');
+                $('.table').append('  <tbody><tr><th scope="row">'+jd.employees[9].id+'</th><td>'+jd.employees[9].employee_name+'</td><td>$'+jd.employees[9].employee_salary+'</td><td>'+jd.employees[9].employee_age+'</td><td>'+jd.employees[9].profile_image+'</td></tr></tbody>');
+                $('.table').append('  <tbody><tr><th scope="row">'+jd.employees[10].id+'</th><td>'+jd.employees[10].employee_name+'</td><td>$'+jd.employees[10].employee_salary+'</td><td>'+jd.employees[10].employee_age+'</td><td>'+jd.employees[10].profile_image+'</td></tr></tbody>');
+                $('.table').append('  <tbody><tr><th scope="row">'+jd.employees[11].id+'</th><td>'+jd.employees[11].employee_name+'</td><td>$'+jd.employees[11].employee_salary+'</td><td>'+jd.employees[11].employee_age+'</td><td>'+jd.employees[11].profile_image+'</td></tr></tbody>');
+                $('.table').append('  <tbody><tr><th scope="row">'+jd.employees[12].id+'</th><td>'+jd.employees[12].employee_name+'</td><td>$'+jd.employees[12].employee_salary+'</td><td>'+jd.employees[12].employee_age+'</td><td>'+jd.employees[12].profile_image+'</td></tr></tbody>');
+                $('.table').append('  <tbody><tr><th scope="row">'+jd.employees[13].id+'</th><td>'+jd.employees[13].employee_name+'</td><td>$'+jd.employees[13].employee_salary+'</td><td>'+jd.employees[13].employee_age+'</td><td>'+jd.employees[13].profile_image+'</td></tr></tbody>');
+                $('.table').append('  <tbody><tr><th scope="row">'+jd.employees[14].id+'</th><td>'+jd.employees[14].employee_name+'</td><td>$'+jd.employees[14].employee_salary+'</td><td>'+jd.employees[14].employee_age+'</td><td>'+jd.employees[14].profile_image+'</td></tr></tbody>');
+                $('.table').append('  <tbody><tr><th scope="row">'+jd.employees[15].id+'</th><td>'+jd.employees[15].employee_name+'</td><td>$'+jd.employees[15].employee_salary+'</td><td>'+jd.employees[15].employee_age+'</td><td>'+jd.employees[15].profile_image+'</td></tr></tbody>');
+                $('.table').append('  <tbody><tr><th scope="row">'+jd.employees[16].id+'</th><td>'+jd.employees[16].employee_name+'</td><td>$'+jd.employees[16].employee_salary+'</td><td>'+jd.employees[16].employee_age+'</td><td>'+jd.employees[16].profile_image+'</td></tr></tbody>');
+                $('.table').append('  <tbody><tr><th scope="row">'+jd.employees[17].id+'</th><td>'+jd.employees[17].employee_name+'</td><td>$'+jd.employees[17].employee_salary+'</td><td>'+jd.employees[17].employee_age+'</td><td>'+jd.employees[17].profile_image+'</td></tr></tbody>');
+                $('.table').append('  <tbody><tr><th scope="row">'+jd.employees[18].id+'</th><td>'+jd.employees[18].employee_name+'</td><td>$'+jd.employees[18].employee_salary+'</td><td>'+jd.employees[18].employee_age+'</td><td>'+jd.employees[18].profile_image+'</td></tr></tbody>');
+                $('.table').append('  <tbody><tr><th scope="row">'+jd.employees[19].id+'</th><td>'+jd.employees[19].employee_name+'</td><td>$'+jd.employees[19].employee_salary+'</td><td>'+jd.employees[19].employee_age+'</td><td>'+jd.employees[19].profile_image+'</td></tr></tbody>');
+                $('.table').append('  <tbody><tr><th scope="row">'+jd.employees[20].id+'</th><td>'+jd.employees[20].employee_name+'</td><td>$'+jd.employees[20].employee_salary+'</td><td>'+jd.employees[20].employee_age+'</td><td>'+jd.employees[20].profile_image+'</td></tr></tbody>');
+                $('.table').append('  <tbody><tr><th scope="row">'+jd.employees[21].id+'</th><td>'+jd.employees[21].employee_name+'</td><td>$'+jd.employees[21].employee_salary+'</td><td>'+jd.employees[21].employee_age+'</td><td>'+jd.employees[21].profile_image+'</td></tr></tbody>');
+                $('.table').append('  <tbody><tr><th scope="row">'+jd.employees[22].id+'</th><td>'+jd.employees[22].employee_name+'</td><td>$'+jd.employees[22].employee_salary+'</td><td>'+jd.employees[22].employee_age+'</td><td>'+jd.employees[22].profile_image+'</td></tr></tbody>');
+                $('.table').append('  <tbody><tr><th scope="row">'+jd.employees[23].id+'</th><td>'+jd.employees[23].employee_name+'</td><td>$'+jd.employees[23].employee_salary+'</td><td>'+jd.employees[23].employee_age+'</td><td>'+jd.employees[23].profile_image+'</td></tr></tbody>');
+ 
+            });
+        })
+
+    })
+         
+
+
+</script>
+
+</html>
